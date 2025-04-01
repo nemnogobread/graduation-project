@@ -24,7 +24,7 @@ def make_measurements(receiver, transmitter, distance, start_signal):
     req_len = 100  # Программа запрашивает у приемника измерения короткими сериями (пакетами). Это длина такого пакета
     HOST_DEV = 0
 
-    PATH = 'C:/Users/infor/OneDrive/Рабочий стол/GlebMarat/Gleb/Lab6/measurements2/'  # Директория, в которой будет храниться файл с результатами измерений
+    PATH = 'C:/Users/infor/OneDrive/Рабочий стол/GlebMarat/Gleb/Lab6/measurements3/'  # Директория, в которой будет храниться файл с результатами измерений
     filename = str(measure_number) + '_measurements_' + transmitter + '_on_' + str(distance) + '_meters'   # Файл с результатами измерений
     num_cycles = int(num_points_to_read/req_len)  # Число считываний пакетов
 
