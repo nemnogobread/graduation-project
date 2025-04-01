@@ -27,6 +27,8 @@ if __name__ == "__main__":
     data_x = [0 for i in range(files_number)]
     data_y_COM5 = [0 for i in range(files_number)]
     data_y_COM6 = [0 for i in range(files_number)]
+    temp_COM5 = [0 for i in range(files_number)]
+    temp_COM6 = [0 for i in range(files_number)]
     result_distance = [0 for i in range(files_number)]
     h = 21 * 1e-3
     print(len(csv_files))
@@ -60,12 +62,13 @@ if __name__ == "__main__":
         if i == 6 or i == 10:
             pass
         else:
-            dist_COM5 = data_x[6] * pow(10, ( (base_amplitude_COM5 - data_y_COM5[i]) / (10 * h * n_COM5 )))
-            dist_COM6 = data_x[6] * pow(10, ( (base_amplitude_COM6 - data_y_COM6[i]) / (10 * h * n_COM6 )))
-
+            dist_COM5 = data_x[10] * pow(10, ( (base_amplitude_COM5 - data_y_COM5[i]) / (10 * h * n_COM5 )))
+            dist_COM6 = data_x[10] * pow(10, ( (base_amplitude_COM6 - data_y_COM6[i]) / (10 * h * n_COM6 )))
+            temp_COM5[i] = 5 - dist_COM5
+            temp_COM6[i] = dist_COM6
             x_min = max(x_pos_COM5 - dist_COM5, x_pos_COM6 - dist_COM6)
             x_max = min(x_pos_COM5 + dist_COM5, x_pos_COM6 + dist_COM6)
-            result_distance[i] =  (x_min + x_max) / 2
+            result_distance[i] =  (dist_COM6 + 5 - dist_COM5) / 2
 
     x = np.linspace(0.5, 4.5, 4)
     y = x
@@ -76,6 +79,18 @@ if __name__ == "__main__":
     result_distance.pop(10)
     result_distance.pop(6)
 
+    temp_COM5.pop(10)
+    temp_COM5.pop(6)
+    temp_COM6.pop(10)
+    temp_COM6.pop(6)
+
+    error = 0
+    for i in range(0, 15):
+        error += abs(result_distance[i] - data_x[i])
+    error/= 15
+    print(error)
+    #plt.plot(data_x, temp_COM6, label="COM6")
+    #plt.plot(data_x, temp_COM5, label="COM5")
     plt.plot(data_x, result_distance, label="distance")
     plt.legend()
     plt.grid(True)
