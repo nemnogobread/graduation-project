@@ -1,0 +1,48 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" border="50" scale="3" compressed="false" locked="false" version="26.2.2">
+  <diagram name="Blank" id="YmL12bMKpDGza6XwsDPr">
+    <mxGraphModel dx="1397" dy="362" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="1" shadow="0">
+      <root>
+        <mxCell id="X5NqExCQtvZxIxQ7pmgY-0" />
+        <mxCell id="1" parent="X5NqExCQtvZxIxQ7pmgY-0" />
+        <object label="" placeholders="1" id="Gr0Zq-AI6Quabplr0KPa-103">
+          <mxCell style="image;html=1;image=img/lib/clip_art/computers/Laptop_128x128.png;fontFamily=Helvetica;fontSize=12;fontColor=#0A3DA3;align=center;strokeWidth=2;fillColor=#EDF5FF;fontStyle=1;verticalAlign=bottom;strokeColor=none;labelBackgroundColor=#EDF5FF;labelBorderColor=none;labelPosition=center;verticalLabelPosition=top;" parent="1" vertex="1">
+            <mxGeometry x="-523.45" y="480" width="80" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="YcL9H07bTUGaqKfZckYU-1" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.agw_aligateway;" parent="1" vertex="1">
+          <mxGeometry x="-507" y="378" width="47.1" height="39.6" as="geometry" />
+        </mxCell>
+        <mxCell id="YcL9H07bTUGaqKfZckYU-2" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.agw_aligateway;" parent="1" vertex="1">
+          <mxGeometry x="-750" y="378" width="47.1" height="39.6" as="geometry" />
+        </mxCell>
+        <mxCell id="YcL9H07bTUGaqKfZckYU-3" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.agw_aligateway;" parent="1" vertex="1">
+          <mxGeometry x="-260" y="378" width="47.1" height="39.6" as="geometry" />
+        </mxCell>
+        <mxCell id="M880iQTlcIPckHHo8cyl-1" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Anchor 1&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="1" connectable="0" vertex="1">
+          <mxGeometry x="-728.2380952380952" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="M880iQTlcIPckHHo8cyl-2" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Anchor 2&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="1" connectable="0" vertex="1">
+          <mxGeometry x="-236.44809523809516" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="M880iQTlcIPckHHo8cyl-3" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Main device&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="1" connectable="0" vertex="1">
+          <mxGeometry x="-483.4480952380952" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="NuutMMW1q3ZvTcBgo77i-7" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.013;entryY=0.817;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="YcL9H07bTUGaqKfZckYU-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-498" y="545" as="sourcePoint" />
+            <mxPoint x="-592" y="494" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-543" y="545" />
+              <mxPoint x="-543" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NuutMMW1q3ZvTcBgo77i-13" value="signal 1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="NuutMMW1q3ZvTcBgo77i-7">
+          <mxGeometry x="0.0272" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
