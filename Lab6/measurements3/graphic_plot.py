@@ -44,8 +44,8 @@ if __name__ == "__main__":
         if port == "COM6":
             data_y_COM6[index-1] = signal_amplitude
 
-    plt.plot(data_x, data_y_COM5, label="Anchor 2")
-    plt.plot(data_x, data_y_COM6, label="Anchor 1")
+    plt.plot(data_x, data_y_COM5, label="Якорь 2")
+    plt.plot(data_x, data_y_COM6, label="Якорь 1")
     plt.xlabel("d, м")
     plt.ylabel("A, В")
     plt.legend()

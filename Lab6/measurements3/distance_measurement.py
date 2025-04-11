@@ -103,7 +103,7 @@ if __name__ == "__main__":
     print(error)
     # plt.plot(data_x_COM6, temp_COM6, label="COM6")
     # plt.plot(data_x_COM6, temp_COM5, label="COM5")
-    plt.plot(data_x_COM6, result_distance, label="distance")
+    plt.plot(data_x_COM6, result_distance, label="Расстояние")
     plt.xlabel("Реальное расстояние, м")
     plt.ylabel("Измеренное расстояние , м")
     plt.legend()
