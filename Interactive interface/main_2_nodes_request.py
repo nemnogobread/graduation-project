@@ -2,7 +2,7 @@ import COM
 import pandas as pd
 import time
 
-def make_measurements(receiver, transmitter, start_signal):
+def make_signal_measurements(receiver, start_signal):
 
     start = time.time() ## точка отсчета времени
 

@@ -1,0 +1,52 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
+  <diagram name="Страница — 1" id="aREJj9CGo8Agl3AvaE9A">
+    <mxGraphModel dx="418" dy="254" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="z_KhW3cyvPil9wCJX3oF-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="160" width="320" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="z_KhW3cyvPil9wCJX3oF-2" value="График (одномерные или двумерные координаты)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="170" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="z_KhW3cyvPil9wCJX3oF-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="170" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="z_KhW3cyvPil9wCJX3oF-4" value="Кнопка: определение координат" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="320" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="z_KhW3cyvPil9wCJX3oF-5" value="Консоль для real time информации" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="z_KhW3cyvPil9wCJX3oF-6" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="180" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="z_KhW3cyvPil9wCJX3oF-7" value="&lt;font style=&quot;line-height: 100%; font-size: 7px;&quot;&gt;ввод&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="399" y="180" width="21" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="z_KhW3cyvPil9wCJX3oF-8" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;задать узел:&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310" y="175" width="40" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="z_KhW3cyvPil9wCJX3oF-10" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="205" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="z_KhW3cyvPil9wCJX3oF-11" value="&lt;font style=&quot;line-height: 100%; font-size: 7px;&quot;&gt;ввод&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="399" y="205" width="21" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="z_KhW3cyvPil9wCJX3oF-12" value="&lt;font style=&quot;font-size: 6px;&quot;&gt;задать расстояние:&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310" y="210" width="40" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="z_KhW3cyvPil9wCJX3oF-14" value="btn.3" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="240" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="z_KhW3cyvPil9wCJX3oF-15" value="btn.4" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="355" y="240" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="z_KhW3cyvPil9wCJX3oF-16" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="240" width="30" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
