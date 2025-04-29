@@ -66,7 +66,7 @@ void setup()
   set_working_mode(RXMODE);  // Rx Mode
 
   Serial.begin(9600);
-  Serial2.begin(100000);
+  Serial2.begin(2000000);
 }
 
 void set_working_mode(uint8_t mode)  // Установка рабочего режима (прием или передача)
@@ -125,7 +125,7 @@ void loop() {
           set_working_mode(TXMODE);
           delay(1);
           
-          for(int i = 0; i < 200000; i++){
+          for(int i = 0; i < 4000000; i++){
             Serial2.write(224);
           }
 

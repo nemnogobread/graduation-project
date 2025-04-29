@@ -1,0 +1,43 @@
+{
+    "anchor1": "COM5",
+    "anchor2": "COM6",
+    "mobile_device": "COM3",
+    "start_signal": {
+        "COM5": 120,
+        "COM6": 140
+    },
+    "anchor_position": {
+        "COM5": [
+            1.0
+        ],
+        "COM6": [
+            0.0
+        ]
+    },
+    "base_distance": {
+        "COM5": 0.4,
+        "COM6": 0.4,
+        "": 0.0
+    },
+    "base_amplitude": {
+        "COM5": 1.6598595153808593,
+        "COM6": 1.7348048034667969,
+        "": 1.5982268188476563
+    },
+    "calibration_amplitude": {
+        "COM5": 1.7318584899902343,
+        "COM6": 1.6896966796875
+    },
+    "calibration_distance": {
+        "COM5": 0.6,
+        "COM6": 0.6
+    },
+    "distance": {
+        "COM5": 0.35035161525040454,
+        "COM6": 615.2466792769668
+    },
+    "n_rate": {
+        "COM5": 1.947014643902516,
+        "COM6": 1.2198253938164092
+    }
+}

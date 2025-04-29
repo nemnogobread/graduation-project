@@ -5,7 +5,7 @@ def one_axe_triangulate(anchor_positions, distances):
     
     # Извлекаем границы интервалов
     intervals = [
-        (anchor_pos - distances[anchor_name], anchor_pos + distances[anchor_name])
+        (anchor_pos[0] - distances[anchor_name], anchor_pos[0] + distances[anchor_name])
         for anchor_name, anchor_pos in anchor_positions.items()
     ]
     
@@ -13,10 +13,10 @@ def one_axe_triangulate(anchor_positions, distances):
     lower_bound = max(interval[0] for interval in intervals)
     upper_bound = min(interval[1] for interval in intervals)
     
-    if lower_bound > upper_bound:
-        raise ValueError("Нет пересечения интервалов - проверьте корректность расстояний")
-    
-    return (lower_bound + upper_bound) / 2
+    # if lower_bound > upper_bound:
+    #     raise ValueError("Нет пересечения интервалов - проверьте корректность расстояний")
+
+    return [(lower_bound + upper_bound) / 2]
 
 
 def two_axe_triangilate(anchor_positions, distances):

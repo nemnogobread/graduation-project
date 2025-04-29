@@ -66,7 +66,7 @@ void setup()
   set_working_mode(RXMODE);  // Rx Mode
 
   Serial.begin(9600);
-  Serial2.begin(3000000);
+  Serial2.begin(2000000);
 }
 
 void set_working_mode(uint8_t mode)  // Установка рабочего режима (прием или передача)
