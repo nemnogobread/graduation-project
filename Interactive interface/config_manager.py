@@ -19,7 +19,7 @@ def get_default_config():
         "anchor2": 'COM6',
         "mobile_device": 'COM3',
         "start_signal": {"COM5": 120, "COM6": 140},
-        "anchor_position": {"COM5": [1.0], "COM6": [0.0]},
+        "anchor_position": {"COM5": [0.75, 0.07], "COM6": [0.00, 0.56]},
         "base_distance": {"COM5": -1.0, "COM6": -1.0},
         "base_amplitude": {"COM5": -1.0, "COM6": -1.0},
         "calibration_amplitude": {"COM5": -1.0, "COM6": -1.0},

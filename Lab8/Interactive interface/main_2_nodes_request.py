@@ -1,21 +1,8 @@
-# Измерение уровня мошности сигнала.
-# Осуществляет последовательный опрос нескольких приемников, подключенных к ПК.
-# Результаты считываются короткими пакетами.
-
-
 import COM
-from   win_dev_list import get_com_dev_list
 import pandas as pd
-import numpy as np
 import time
 
-start_signal_for_COM5 = 120
-start_signal_for_COM6 = 140
-distance_COM3_COM5 = 0.5
-distance_COM3_COM6 = 4.5
-measure_number = 0
-
-def make_measurements(receiver, transmitter, distance, start_signal):
+def make_signal_measurements(receiver, start_signal):
 
     start = time.time() ## точка отсчета времени
 
@@ -24,8 +11,6 @@ def make_measurements(receiver, transmitter, distance, start_signal):
     req_len = 100  # Программа запрашивает у приемника измерения короткими сериями (пакетами). Это длина такого пакета
     HOST_DEV = 0
 
-    PATH = 'C:/Users/infor/OneDrive/Рабочий стол/GlebMarat/Gleb/Lab7/baudrate-test-measurements/'  # Директория, в которой будет храниться файл с результатами измерений
-    filename = str(measure_number) + '_measurements_' + transmitter + '_on_' + str(distance) + '_meters'   # Файл с результатами измерений
     num_cycles = int(num_points_to_read/req_len)  # Число считываний пакетов
 
     result = pd.DataFrame(columns = ['amp_steps_' + receiver])
@@ -59,20 +44,9 @@ def make_measurements(receiver, transmitter, distance, start_signal):
         result = (res_tmp.copy() if result.empty
                   else pd.concat([result, res_tmp], axis=0, ignore_index=True))
 
-    result.to_csv(PATH + filename + '.csv', index=False) # Пишем результаты в файл
     print("\n", time.time() - start)
+    print('Measurement done')
 
-    print('Done')
-
-
-if __name__ == "__main__":
-
-    print('COM5: ', end='')
-    make_measurements('COM3', 'COM5', distance_COM3_COM5, start_signal_for_COM5)
-    # print('waiting 10 seconds', end='')
-    # for i in range(10):
-    #     time.sleep(1)
-    #     print('.', end='')
-    # print('\nCOM6: ', end='')
-    # make_measurements('COM3', 'COM6', distance_COM3_COM6, start_signal_for_COM6)
-
+    data = result['amp_steps_' + receiver] / 4096 * 3.3
+    print(sum(data)/len(data))
+    return sum(data)/len(data)

@@ -7,7 +7,7 @@ def make_signal_measurements(receiver, start_signal):
     start = time.time() ## точка отсчета времени
 
     baudrate = 2000000  # 115200 #1200 #115200 #1000000 # Скорость COM - порта
-    num_points_to_read = 4000  # Число измерений в серии
+    num_points_to_read = 400  # Число измерений в серии
     req_len = 100  # Программа запрашивает у приемника измерения короткими сериями (пакетами). Это длина такого пакета
     HOST_DEV = 0
 
