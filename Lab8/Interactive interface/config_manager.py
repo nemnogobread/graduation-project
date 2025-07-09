@@ -15,15 +15,15 @@ def load_config():
 
 def get_default_config():
     return {
-        "anchor1": 'COM5',
-        "anchor2": 'COM4',
+        "anchor1": 'COM8',
+        "anchor2": 'COM6',
         "mobile_device": 'COM3',
-        "start_signal": {"COM5": 120, "COM4": 140},
-        "anchor_position": {"COM5": [0.75, 0.07], "COM4": [0.00, 0.56]},
-        "base_distance": {"COM5": -1.0, "COM4": -1.0},
-        "base_amplitude": {"COM5": -1.0, "COM4": -1.0},
-        "calibration_amplitude": {"COM5": -1.0, "COM4": -1.0},
-        "calibration_distance": {"COM5": -1.0, "COM4": -1.0},
-        "distance": {"COM5": -1.0, "COM4": -1.0},
-        "n_rate": {"COM5": -1.0, "COM4": -1.0}
+        "start_signal": {"COM8": 180, "COM6": 160},
+        "anchor_position": {"COM8": [2, 0], "COM6": [0, -2]},
+        "base_distance": {"COM8": -1.0, "COM6": -1.0},
+        "base_amplitude": {"COM8": -1.0, "COM6": -1.0},
+        "calibration_amplitude": {"COM8": -1.0, "COM6": -1.0},
+        "calibration_distance": {"COM8": -1.0, "COM6": -1.0},
+        "distance": {"COM8": -1.0, "COM6": -1.0},
+        "n_rate": {"COM8": -1.0, "COM6": -1.0}
     }

@@ -115,8 +115,9 @@ unsigned int mm = 0;
 int bb = 0;
 uint16_t req_len;
 
-uint8_t start_signal_COM5 = 120;
-uint8_t start_signal_COM6 = 140;
+uint8_t start_signal_COM4 = 140;
+uint8_t start_signal_COM6 = 160;
+uint8_t start_signal_COM8 = 180;
 uint8_t listen_signal = 100; 
 
 void loop() {
@@ -134,7 +135,7 @@ void loop() {
       {
         int data = Serial.parseInt();
 
-        if (data == start_signal_COM5 || data == start_signal_COM6){
+        if (data == start_signal_COM4 || data == start_signal_COM6 || data == start_signal_COM8){
           Serial.write(data);
           set_working_mode(TXMODE);
           delay(5);

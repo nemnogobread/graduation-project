@@ -100,7 +100,7 @@ void set_working_mode(uint8_t mode)  // Установка рабочего ре
 	}
 }
 
-uint8_t start_signal_COM4 = 120;
+uint8_t start_signal_COM6 = 160;
 
 void loop() {
 
@@ -118,7 +118,7 @@ void loop() {
         uint ff;
         ff = Serial2.read();
         
-        if(ff == start_signal_COM4)
+        if(ff == start_signal_COM6)
         {
           //Serial.write(ff);
           delay(1);
