@@ -2,6 +2,7 @@ import math
 import os
 import matplotlib.pyplot as plt
 import numpy as np
+import csv
 
 import pandas as pd
 from matplotlib.pyplot import title
@@ -96,16 +97,29 @@ if __name__ == "__main__":
     temp_COM6.pop(10)
     temp_COM6.pop(6)
 
+    filename = "results.csv"
+
     error = 0
-    for i in range(0, 15):
-        error += abs(result_distance[i] - data_x_COM6[i])
+    
+    # with open(filename, mode='w', newline='') as file:
+    #     writer = csv.writer(file)
+        
+    #     # Записываем заголовки столбцов
+    #     writer.writerow(["result_distance", "data_x_COM6", "difference"])
+        
+    #     # Записываем данные построчно
+    #     for i in range(len(result_distance)):
+    #         error = result_distance[i] - data_x_COM6[i]
+    #         writer.writerow([result_distance[i], data_x_COM6[i], error])
+    
     error/= 15
+    
     print(error)
     # plt.plot(data_x_COM6, temp_COM6, label="COM6")
     # plt.plot(data_x_COM6, temp_COM5, label="COM5")
-    plt.plot(data_x_COM6, result_distance, label="Расстояние")
-    plt.xlabel("Реальное расстояние, м")
-    plt.ylabel("Измеренное расстояние , м")
+    plt.plot(data_x_COM6, result_distance, label="Координаты МУ")
+    plt.xlabel("Реальное положение, м")
+    plt.ylabel("Измеренные координаты , м")
     plt.legend()
     plt.grid(True)
     plt.show()

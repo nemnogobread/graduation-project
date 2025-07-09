@@ -46,7 +46,7 @@ if __name__ == "__main__":
 
     plt.plot(data_x, data_y_COM5, label="Якорь 2")
     plt.plot(data_x, data_y_COM6, label="Якорь 1")
-    plt.xlabel("d, м")
+    plt.xlabel("x, м")
     plt.ylabel("A, В")
     plt.legend()
     plt.grid(True)
