@@ -115,7 +115,9 @@ unsigned int mm = 0;
 int bb = 0;
 uint16_t req_len;
 
+uint8_t start_signal_COM3 = 130;
 uint8_t start_signal_COM4 = 140;
+uint8_t start_signal_COM5 = 150;
 uint8_t start_signal_COM6 = 160;
 uint8_t start_signal_COM8 = 180;
 uint8_t listen_signal = 100; 
