@@ -100,7 +100,7 @@ void set_working_mode(uint8_t mode)  // Установка рабочего ре
 	}
 }
 
-uint8_t start_signal_COM4 = 120;
+uint8_t start_signal_COM4 = 140;
 
 void loop() {
 

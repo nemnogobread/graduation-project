@@ -44,9 +44,12 @@ def make_signal_measurements(receiver, start_signal):
         result = (res_tmp.copy() if result.empty
                   else pd.concat([result, res_tmp], axis=0, ignore_index=True))
 
-    print("\n", time.time() - start)
-    print('Measurement done')
+    PATH = './resourses/'
+    filename = 'temp'
+    result.to_csv(PATH + filename + '.csv', index=False) # Пишем результаты в файл
 
+    print("\n", time.time() - start)
     data = result['amp_steps_' + receiver] / 4096 * 3.3
-    print(sum(data)/len(data))
+    print('Measurement done, average amplitude', sum(data)/len(data))
+
     return sum(data)/len(data)

@@ -10,10 +10,12 @@ import numpy as np
 import time
 
 start_signal_for_COM8 = 180
+start_signal_for_COM4 = 140
 start_signal_for_COM6 = 160
-distance_COM3_COM8 = 3
-distance_COM3_COM6 = 0.5
-measure_number = 1
+distance_COM3_COM8 = 0.25
+distance_COM3_COM6 = 0.25
+distance_COM3_COM4 = 0.25
+measure_number = 0
 
 def make_measurements(receiver, transmitter, distance, start_signal):
 
@@ -67,8 +69,16 @@ def make_measurements(receiver, transmitter, distance, start_signal):
 
 if __name__ == "__main__":
 
-    print('COM6: ', end='')
-    make_measurements('COM3', 'COM6', distance_COM3_COM6, start_signal_for_COM6)
+    cur = 'COM6'
+    print(cur, ': ', end='')
+    match cur:
+        case 'COM4':
+            make_measurements('COM3', cur, distance_COM3_COM4, start_signal_for_COM4)
+        case 'COM6':
+            make_measurements('COM3', cur, distance_COM3_COM6, start_signal_for_COM6)
+        case 'COM8':
+            make_measurements('COM3', cur, distance_COM3_COM8, start_signal_for_COM8)
+
     # print('waiting 10 seconds', end='')
     # for i in range(10):
     #     time.sleep(1)

@@ -39,6 +39,7 @@ class PositioningInterface:
 
         self.anchor1 = config['anchor1']
         self.anchor2 = config['anchor2']
+        self.anchor3 = config['anchor3']
         self.mobile_device = config['mobile_device']
         self.start_signal = config['start_signal']
         self.anchor_position = config['anchor_position']
@@ -54,6 +55,7 @@ class PositioningInterface:
         config = {
             "anchor1": self.anchor1,
             "anchor2": self.anchor2,
+            "anchor3": self.anchor3,
             "mobile_device": self.mobile_device,
             "start_signal": self.start_signal,
             "anchor_position": self.anchor_position,
@@ -246,7 +248,7 @@ class PositioningInterface:
             y_padding = (max(all_y) - min(all_y)) * 0.1
             
             self.ax.set_xlim(min(all_x) - x_padding, max(all_x) + x_padding)
-            self.ax.set_ylim(min(all_y) - y_padding, max(all_y) + y_padding)
+            self.ax.set_ylim(-3 - y_padding, max(all_y) + y_padding) # -3 нужно для корректного отображения графика
         else:
             self.ax.set_xlabel('Координата')
             self.ax.set_ylabel('')

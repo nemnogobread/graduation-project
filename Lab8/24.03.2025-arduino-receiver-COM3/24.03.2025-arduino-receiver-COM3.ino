@@ -105,7 +105,7 @@ uint16_t max_threshold;
 uint16_t min_threshold; 
 uint16_t threshold;
 uint16_t old_threshold;
-uint16_t MAX_SUM = 2047; //135; //135; //135; //405; //405; //335; //3375; //335; //3375; //338; // //9000
+uint16_t MAX_SUM = 225; //135; //135; //135; //405; //405; //335; //3375; //335; //3375; //338; // //9000
 uint16_t LOW_BOUND = 0.4*MAX_SUM; //0.4*MAX_SUM; //0.2*MAX_SUM; //MAX_SUM/4; //0.05*MAX_SUM; //1000;
 uint32_t sum_threshold = 0;
 float mean_threshold = 0;
@@ -121,6 +121,8 @@ uint8_t start_signal_COM5 = 150;
 uint8_t start_signal_COM6 = 160;
 uint8_t start_signal_COM8 = 180;
 uint8_t listen_signal = 100; 
+
+uint8_t temp
 
 void loop() {
 
