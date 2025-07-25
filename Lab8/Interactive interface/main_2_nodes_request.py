@@ -48,8 +48,8 @@ def make_signal_measurements(receiver, start_signal):
     filename = 'temp'
     result.to_csv(PATH + filename + '.csv', index=False) # Пишем результаты в файл
 
-    print("\n", time.time() - start)
+    print("\ttime: ", round(time.time() - start, 2))
     data = result['amp_steps_' + receiver] / 4096 * 3.3
-    print('Measurement done, average amplitude', sum(data)/len(data))
-
+    print('Average amplitude', round(sum(data) / len(data), 2), '\tlast value:', round(data.iloc[-1], 2))
+    print()
     return sum(data)/len(data)

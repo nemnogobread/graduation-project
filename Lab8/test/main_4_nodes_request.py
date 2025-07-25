@@ -12,9 +12,9 @@ import time
 start_signal_for_COM8 = 180
 start_signal_for_COM4 = 140
 start_signal_for_COM6 = 160
-distance_COM3_COM8 = 0.25
-distance_COM3_COM6 = 0.25
-distance_COM3_COM4 = 0.25
+distance_COM3_COM8 = 1
+distance_COM3_COM6 = 1
+distance_COM3_COM4 = 1
 measure_number = 0
 
 def make_measurements(receiver, transmitter, distance, start_signal):
@@ -62,14 +62,12 @@ def make_measurements(receiver, transmitter, distance, start_signal):
                   else pd.concat([result, res_tmp], axis=0, ignore_index=True))
 
     result.to_csv(PATH + filename + '.csv', index=False) # Пишем результаты в файл
-    print("\n", time.time() - start)
-
-    print('Done')
+    print('\t', time.time() - start)
 
 
 if __name__ == "__main__":
 
-    cur = 'COM6'
+    cur = 'COM8'
     print(cur, ': ', end='')
     match cur:
         case 'COM4':

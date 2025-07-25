@@ -11,9 +11,10 @@ import time
 
 start_signal_for_COM5 = 120
 start_signal_for_COM6 = 140
+start_signal_for_COM8 = 180
 distance_COM3_COM5 = 0.5
 distance_COM3_COM6 = 4.5
-measure_number = 17
+measure_number = 0
 
 def make_measurements(receiver, transmitter, distance, start_signal):
 
@@ -24,7 +25,7 @@ def make_measurements(receiver, transmitter, distance, start_signal):
     req_len = 100  # Программа запрашивает у приемника измерения короткими сериями (пакетами). Это длина такого пакета
     HOST_DEV = 0
 
-    PATH = 'C:/Users/infor/OneDrive/Рабочий стол/GlebMarat/Gleb/Lab6/measurements3/'  # Директория, в которой будет храниться файл с результатами измерений
+    PATH = 'C:/Users/infor/OneDrive/Рабочий стол/GlebMarat/Gleb/Lab6/'  # Директория, в которой будет храниться файл с результатами измерений
     filename = str(measure_number) + '_measurements_' + transmitter + '_on_' + str(distance) + '_meters'   # Файл с результатами измерений
     num_cycles = int(num_points_to_read/req_len)  # Число считываний пакетов
 
@@ -67,12 +68,12 @@ def make_measurements(receiver, transmitter, distance, start_signal):
 
 if __name__ == "__main__":
 
-    print('COM5: ', end='')
-    make_measurements('COM3', 'COM5', distance_COM3_COM5, start_signal_for_COM5)
-    print('waiting 10 seconds', end='')
-    for i in range(10):
-        time.sleep(1)
-        print('.', end='')
-    print('\nCOM6: ', end='')
-    make_measurements('COM3', 'COM6', distance_COM3_COM6, start_signal_for_COM6)
+    print('COM8: ', end='')
+    make_measurements('COM3', 'COM8', distance_COM3_COM5, start_signal_for_COM8)
+    # print('waiting 10 seconds', end='')
+    # for i in range(10):
+    #     time.sleep(1)
+    #     print('.', end='')
+    # print('\nCOM6: ', end='')
+    # make_measurements('COM3', 'COM6', distance_COM3_COM6, start_signal_for_COM6)
 

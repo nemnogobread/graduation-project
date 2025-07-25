@@ -105,11 +105,10 @@ uint16_t max_threshold;
 uint16_t min_threshold; 
 uint16_t threshold;
 uint16_t old_threshold;
-uint16_t MAX_SUM = 225; //135; //135; //135; //405; //405; //335; //3375; //335; //3375; //338; // //9000
-uint16_t LOW_BOUND = 0.4*MAX_SUM; //0.4*MAX_SUM; //0.2*MAX_SUM; //MAX_SUM/4; //0.05*MAX_SUM; //1000;
+uint16_t MAX_SUM = 2047; //135; //135; //135; //405; //405; //335; //3375; //335; //3375; //338; // //9000
+uint16_t LOW_BOUND = 0.23*MAX_SUM; //0.4*MAX_SUM; //0.2*MAX_SUM; //MAX_SUM/4; //0.05*MAX_SUM; //1000;
 uint32_t sum_threshold = 0;
 float mean_threshold = 0;
-unsigned int NUM_TH = 1;
 unsigned int ii = 0; 
 unsigned int mm = 0;
 int bb = 0;
@@ -121,8 +120,7 @@ uint8_t start_signal_COM5 = 150;
 uint8_t start_signal_COM6 = 160;
 uint8_t start_signal_COM8 = 180;
 uint8_t listen_signal = 100; 
-
-uint8_t temp
+uint8_t temp;
 
 void loop() {
 
@@ -165,33 +163,31 @@ void loop() {
           for (int bb = 0; bb < req_len; bb++) {  // Цикл измерений
               
             mean_threshold = 0;
-            for (mm = NUM_TH; mm > 0; mm--){ // Может усреднять несколько измерений если NUM_TH>1
-              max_threshold = 0b0000101000101110; //2100 mV  // Максимальный порог
-              min_threshold = nomad; // Минимальный порог
-              old_threshold = 0;
-              threshold = nomad;  // Текущее значение порога
-              
-              while (threshold != old_threshold) {
-                writeShiftRegister16(SS, threshold); // Выставляем порог на компараторе
-                sum_1 = 0;
-                for (ii = MAX_SUM; ii > 0; ii--){  // Считываем MAX_SUM значений из регистра выхода компаратора     
-                  sum_1 += ((RXDATAPORT->IDR & (1 << RXDATAPIN)) == 0);
-                }   
-                if ((LOW_BOUND <= sum_1)) {  // Если единиц больше чем LOW_BOUND (в данном случае больше чем четверть отсчетов) - повышаем порог
-                  min_threshold = threshold;
-                  old_threshold = threshold;
-                  threshold = (threshold + max_threshold) / 2;       
-                }    
-                else { // Если меньше - понижаем порог
-                  max_threshold = threshold;
-                  old_threshold = threshold;   
-                  threshold = (threshold + min_threshold) / 2;         
-                } 
-              }
-              sum_threshold += threshold;   // Суммируем измерения   
-            }
+            max_threshold = 0b0000101000101110; //2100 mV  // Максимальный порог
+            min_threshold = nomad; // Минимальный порог
+            old_threshold = 0;
+            threshold = nomad;  // Текущее значение порога
             
-            mean_threshold = (float)sum_threshold/NUM_TH; // Усредняем измерения
+            while (threshold != old_threshold) {
+              writeShiftRegister16(SS, threshold); // Выставляем порог на компараторе
+              sum_1 = 0;
+              for (ii = MAX_SUM; ii > 0; ii--){  // Считываем MAX_SUM значений из регистра выхода компаратора     
+                sum_1 += ((RXDATAPORT->IDR & (1 << RXDATAPIN)) == 0);
+              }   
+              if ((LOW_BOUND <= sum_1)) {  // Если единиц больше чем LOW_BOUND (в данном случае больше чем четверть отсчетов) - повышаем порог
+                min_threshold = threshold;
+                old_threshold = threshold;
+                threshold = (threshold + max_threshold) / 2;       
+              }    
+              else { // Если меньше - понижаем порог
+                max_threshold = threshold;
+                old_threshold = threshold;   
+                threshold = (threshold + min_threshold) / 2;         
+              } 
+            }
+            sum_threshold += threshold;   // Суммируем измерения   
+          
+            mean_threshold = (float)sum_threshold; // Усредняем измерения
             sum_threshold = 0;
             buf[bb] = mean_threshold;  // Накапливаем измерения в пакет
           }
